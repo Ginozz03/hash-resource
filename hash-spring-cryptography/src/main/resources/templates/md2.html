@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/style.css}" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.ayroui.com/1.0/css/bootstrap.min.css"/>
+
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.ayroui.com/1.0/css/starter.css"/>
+    <title>Crittografia MD-2</title>
+    <style>
+        body {
+            overflow-y: scroll;
+        }
+
+        button{
+            background-color: transparent;
+            border: 0px;
+        }
+    </style>
+</head>
+<body>
+<navbar>
+    <section class="navbar-area navbar-one">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="javascript:void(0)">
+                            <img th:src="@{/img/logof.png}" alt="Logo"/>
+                        </a>
+                        <button
+                                class="navbar-toggler"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#navbarOne"
+                                aria-controls="navbarOne"
+                                aria-expanded="false"
+                                aria-label="Toggle navigation"
+                        >
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarOne">
+                            <ul class="navbar-nav m-auto">
+                                <li class="nav-item">
+                                    <a th:href="@{/}">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a
+                                            class="page-scroll active"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#sub-nav1"
+                                            aria-controls="sub-nav1"
+                                            aria-expanded="false"
+                                            aria-label="Toggle navigation"
+                                            href="javascript:void(0)"
+                                    >
+                                        Metodi crittografici
+                                        <div class="sub-nav-toggler">
+                                            <span><i class="lni lni-chevron-down"></i></span>
+                                        </div>
+                                    </a>
+                                    <ul class="sub-menu collapse" id="sub-nav1">
+                                        <li><a th:href="@{/sha1/}">SHA-1</a></li>
+                                        <li><a th:href="@{/md2/}">MD2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a
+                                            class="page-scroll active"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#sub-nav2"
+                                            aria-controls="sub-nav2"
+                                            aria-expanded="false"
+                                            aria-label="Toggle navigation"
+                                            href="javascript:void(0)"
+                                    >
+                                        Teoria
+                                        <div class="sub-nav-toggler">
+                                            <span><i class="lni lni-chevron-down"></i></span>
+                                        </div>
+                                    </a>
+                                    <ul class="sub-menu collapse" id="sub-nav2">
+                                        <li><a th:href="@{/sha1/}">SHA-1</a></li>
+                                        <li><a th:href="@{/md2/}">MD2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="javascript:void(0)">Risorse</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- navbar -->
+                </div>
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+    </section>
+
+    <script src="https://cdn.ayroui.com/1.0/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+        let navbarTogglerOne = document.querySelector(
+            ".navbar-one .navbar-toggler"
+        );
+        navbarTogglerOne.addEventListener("click", function () {
+            navbarTogglerOne.classList.toggle("active");
+        });
+    </script>
+</navbar>
+<br></br>
+<prev>
+    <!--======  Start Section Title One ======-->
+    <div class="section-title-one">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-center">
+                        <div class="content">
+                            <h2 class="fw-bold">Funzione crittografica con algoritmo MD2</h2>
+                            <p>
+                                Applicazione sviluppata in Java che, inserito, nel riquadro sottostante, un messaggio,
+                                lo codifica
+                                utilizzando l'algoritmo MD2 <br> <br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+    </div>
+    <!--====== ABOUT TWO PART ENDS ======-->
+</prev>
+
+<div class="form-style form-style-three">
+    <div class="row">
+        <!-- form input -->
+        <div class="col-lg-4">
+
+        </div>
+        <div class="col-lg-4">
+            <div class="col-lg-4">
+
+            </div>
+
+            <div class="form-input mt-5">
+                <form th:action="@{/md2}" method="post">
+                    <label>Inserisci il messaggio</label>
+                    <div class="input-items active">
+                        <textarea placeholder="Messaggio" name="messaggio" id="mes"></textarea>
+                        <i class="lni lni-pencil-alt"></i>
+
+                    </div>
+                    <div class="col-4" id="fb">
+                        <!--<input type="submit" class="btn icon-btn btn-lg rounded-full primary-btn"/>-->
+                        <button type="submit">
+                            <a class="btn icon-btn btn-lg rounded-full primary-btn" style="background-color: #155bd5;">
+                                <i class="lni lni-play" style="color:white;"></i>
+                            </a>
+                        </button>
+                    </div>
+                </form>
+
+
+            </div>
+
+
+
+
+            <!-- form input -->
+        </div>
+    </div>
+    <!-- row -->
+</div>
+<!-- form-style -->
+
+
+</form>
+<br></br>
+
+
+<div style="position: relative; margin-left: auto; margin-right: auto; width: max-content; background-color: rgba(21, 91, 213,80%); padding: 5px; border-radius: 4px;">
+    <h3 style="color: white; display: inline;">La soluzione è: </h3>
+    <h3 style="font-family: 'Courier New', Courier, monospace; color: white; display: inline;"
+        th:text="${messaggio}"></h3>
+</div>
+
+<br> <br>
+<out>
+    <div class="single-accordion" style="width: 48%; position: relative; margin-left: auto; margin-right: auto;">
+        <div class="accordion-style-one">
+            <div class="accordion" id="accordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <a href="#collapseOne" data-bs-toggle="collapse" role="button" aria-expanded="true">
+                            Step-by-step solution</a>
+                    </div>
+                    <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
+                        <div class="card-body">
+                            <p class="text" style="font-family: 'Courier New', Courier, monospace;" th:utext="${fasi}">
+                                I passaggi per la soluzione:
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- card -->
+    </div>
+    <!-- accordion style one -->
+</out>
+
+
+</body>
+</html>
