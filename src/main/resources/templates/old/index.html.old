@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prova</title>
+</head>
+<body>
+    <form th:action="@{/}" method="post">
+        <label for="mes"></label>
+        <input type="text" name="messaggio" id="mes">
+        <input type="submit" value="invia" onclick="validate()">
+    </form>
+
+    <div th:switch="${messaggio}">
+        <p th:text="${messaggio}"></p>
+        <p th:case="*"></p>
+    </div>
+    <script>
+
+        function validate(){
+            const el = document.getElementById("mes").value
+
+            if(el == ""){
+                return false;
+            }else{
+                return true;
+            }
+        }
+
+    </script>
+</body>
+</html>
